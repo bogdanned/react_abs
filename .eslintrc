@@ -1,0 +1,14 @@
+{
+  "extends": "react-app",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+        "upgrade": "readonly",
+        "webkitSpeechRecognition": "readonly",
+        "webkitSpeechGrammarList": "readonly",
+        "webkitSpeechRecognitionEvent": "readonly"
+
+    }
+}
