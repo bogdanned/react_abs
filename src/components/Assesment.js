@@ -35,7 +35,7 @@ export default class Assesment extends React.Component {
             },
         })
 
-        setTimeout(function(){
+        setTimeout(function () {
             // console.log(questionList[this.state.questionIndex + 1].label, "to say")
             const text = questionList[self.state.questionIndex + 1].label
             window.responsiveVoice.speak('Nice to meet you Frank!')
@@ -44,18 +44,17 @@ export default class Assesment extends React.Component {
                 thinking: false,
                 questionIndex: self.state.questionIndex + 1
             })
-        }, 2000); 
+        }, 2000);
     }
 
 
 
 
     render() {
-        console.log(this.state, "state")
-
+        const { thinking } = this.state
         const question = questionList[this.state.questionIndex]
         const { label, options, name } = question
-        const progressValue = (this.state.questionIndex+1) / questionList.length  * 100
+        const progressValue = (this.state.questionIndex + 1) / questionList.length * 100
         // console.log(progressValue , "progressValue ")
         return (
             <div className="assesmentInner">
@@ -63,12 +62,27 @@ export default class Assesment extends React.Component {
                     <RenderPain />
                 </div>
                 <div className="aiContainer">
-                {this.state.thinking ? <Spin size="large" /> : null}
-                    
-                    <p>Welcome to busco abbs whatever.</p>
+
+                    <p>AVA</p>
 
                     <Progress percent={progressValue} />
-                    <Question label={label} options={options} name={name} onChange={this.answerQuestion} />
+
+                    <Question
+                        label={label}
+                        options={options}
+                        thinking={thinking}
+                        name={name}
+                        thinking={thinking}
+                        onChange={this.answerQuestion}
+                    />
+
+                    {this.state.thinking ? 
+                    <div className="spinnerContainer">
+                        <Spin size="large" />
+                    </div>
+                     : null}
+
+
 
                 </div>
 

@@ -7,6 +7,12 @@
   flex-direction: row;
 }
 
+.spinnerContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .assesmentInner{
     display: flex;
 }

@@ -5,17 +5,17 @@ import { Radio, Input } from 'antd';
 const RadioGroup = Radio.Group;
 const RadioButton = Radio.Button;
 
-const radioStyle = {
-    display: 'block',
+const radioStyle = (thinking) => ({
+    display: !thinking ? 'block' : 'none',
     height: '30px',
     lineHeight: '25px',
     borderLeft: 1,
     margin: '5px'
-};
+})
 
-const renderOptions = (options) => {
+const renderOptions = (options, thinking) => {
     return options.map((opt,index) => (
-        <RadioButton className="option" key={index} style={radioStyle} value={opt.value}>{opt.label}</RadioButton >
+        <RadioButton className="option" key={index} style={radioStyle(thinking)} value={opt.value}>{opt.label}</RadioButton >
     ))
 }
 
@@ -26,9 +26,10 @@ export default class Question extends React.Component{
             value: ""
         }
     }
+
     render(){
-        const {label, options, onChange, name} = this.props
-        const renderedOptions = renderOptions(options)
+        const {label, options, onChange, name, thinking} = this.props
+        const renderedOptions = renderOptions(options, thinking)
         return (
             <div>
                 <h3>{label}</h3>
