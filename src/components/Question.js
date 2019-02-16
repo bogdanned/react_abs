@@ -35,8 +35,7 @@ export default class Question extends React.Component {
     }
 
     onInputChange(e) {
-        console.log(e, "e")
-        e.preventDefault()
+        console.log(e.target.value, "e")
         this.setState({
             value: e.target.value,
             name: e.targe.name
@@ -59,7 +58,7 @@ export default class Question extends React.Component {
                 <h3>{label}</h3>
                 {textType ?
                     <div>
-                        <Input placeholder={name} name={name} onChange={this.onInputChange} />
+                        <Input placeholder={name} name={name} onChange={(e) => this.onInputChange(e)} />
                         <Button onClick={this.onClick}>Submit</Button>
                     </div>
 
