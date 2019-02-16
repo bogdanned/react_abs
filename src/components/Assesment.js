@@ -43,15 +43,16 @@ export default class Assesment extends React.Component {
     render() {
         const question = questionList[this.state.questionIndex]
         const { label, options, name } = question
+        const progressValue = (this.state.questionIndex+1) / questionList.length  * 100
+        console.log(progressValue , "progressValue ")
         return (
-            <div>
-
+            <div className="assesmentInner">
                 <div className="renderPainContainer">
                     <RenderPain />
                 </div>
                 <div className="aiContainer">
                     <p>Welcome to busco abbs whatever.</p>
-                    <Progress percent={30} />
+                    <Progress percent={progressValue} />
                     <Question label={label} options={options} name={name} onChange={this.answerQuestion} />
 
                 </div>

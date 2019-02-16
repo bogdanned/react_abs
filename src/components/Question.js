@@ -8,12 +8,14 @@ const RadioButton = Radio.Button;
 const radioStyle = {
     display: 'block',
     height: '30px',
-    lineHeight: '30px',
+    lineHeight: '25px',
+    borderLeft: 1,
+    margin: '5px'
 };
 
 const renderOptions = (options) => {
     return options.map((opt,index) => (
-        <RadioButton key={index} style={radioStyle} value={opt.value}>{opt.label}</RadioButton >
+        <RadioButton className="option" key={index} style={radioStyle} value={opt.value}>{opt.label}</RadioButton >
     ))
 }
 

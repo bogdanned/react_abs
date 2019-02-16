@@ -7,8 +7,25 @@
   flex-direction: row;
 }
 
+.assesmentInner{
+    display: flex;
+}
+
 .noAssesment{
   text-align: center;
+}
+
+.option{
+  border: 2px solid #5cb57e !important;
+  border-radius: 24px !important;
+}
+
+.option::before{
+  display: none !important;
+}
+
+.option::after{
+  display: none !important;
 }
 
 .headliner{
