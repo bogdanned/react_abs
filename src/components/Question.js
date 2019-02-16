@@ -13,6 +13,11 @@ const radioStyle = (thinking) => ({
     margin: '5px'
 })
 
+
+const groupStyle = {
+    textAlig: "left"
+}
+
 const renderOptions = (options, thinking) => {
     return options.map((opt,index) => (
         <RadioButton className="option" key={index} style={radioStyle(thinking)} value={opt.value}>{opt.label}</RadioButton >
@@ -33,7 +38,7 @@ export default class Question extends React.Component{
         return (
             <div>
                 <h3>{label}</h3>
-                <RadioGroup onChange={onChange} value={this.state.value} name={name}>
+                <RadioGroup styles={groupStyle} onChange={onChange} value={this.state.value} name={name}>
                     {renderedOptions}
                 </RadioGroup>
             </div>
