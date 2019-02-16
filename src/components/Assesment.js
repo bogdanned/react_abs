@@ -21,6 +21,21 @@ export default class Assesment extends React.Component {
       thinking: false
     }
     this.answerQuestion = this.answerQuestion.bind(this)
+    this.submit = this.submit.bind(this)
+  }
+
+  submit(data){
+    console.log(data, "data")
+    const self = this
+    this.setState({
+        thinking: true,
+        answers: {
+          ...this.state.answers,
+          ...data
+  
+        }
+    })
+    console.log(this.state)
   }
 
   answerQuestion (e) {
@@ -37,9 +52,8 @@ export default class Assesment extends React.Component {
 
     setTimeout(function () {
       // console.log(questionList[this.state.questionIndex + 1].label, "to say")
-      const text = questionList[self.state.questionIndex + 1].label
-      window.responsiveVoice.speak('Nice to meet you Frank!')
-      // voice(questionList[this.state.questionIndex + 1].label)
+      const text = questionList[self.state.questionIndex].machine_answer
+      text && window.responsiveVoice.speak(text)
       self.setState({
         thinking: false,
         questionIndex: self.state.questionIndex + 1
@@ -50,7 +64,7 @@ export default class Assesment extends React.Component {
   render () {
     const { thinking } = this.state
     const question = questionList[this.state.questionIndex]
-    const { label, options, name } = question
+    const { label, options, name, textType } = question
     const progressValue = (this.state.questionIndex + 1) / questionList.length * 100
     // console.log(progressValue , "progressValue ")
     return (
@@ -69,7 +83,9 @@ export default class Assesment extends React.Component {
             options={options}
             thinking={thinking}
             name={name}
+            textType={textType}
             thinking={thinking}
+            submit={this.submit}
             onChange={this.answerQuestion}
           />
 
