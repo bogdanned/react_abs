@@ -1,11 +1,16 @@
 export default [
     {
-        label: "",
-        name: "",
+        id: 1,
+        label: "What is your gender?",
+        name: "gender",
         options: [
             {
-                value: "",
-                label: ""
+                value: "male",
+                label: "Male"
+            },
+            {
+                value: "female",
+                label: "Female"
             }
         ]
     }

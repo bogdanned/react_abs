@@ -5,7 +5,6 @@ import { Timeline } from 'antd';
 
 export default () => {
 
-
     return (
         <Timeline pending="Calculating ...">
             <Timeline.Item>Gathered basic data</Timeline.Item>

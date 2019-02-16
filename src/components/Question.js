@@ -12,22 +12,29 @@ const radioStyle = {
 };
 
 const renderOptions = (options) => {
-
-
-    return options.map(opt => (
-        <RadioButton  style={radioStyle} value={opt.value}>{opt.label}</RadioButton >
+    return options.map((opt,index) => (
+        <RadioButton key={index} style={radioStyle} value={opt.value}>{opt.label}</RadioButton >
     ))
 }
 
-export default ({label, options, onChange}) => {
-    return (
-        <div>
-            <h3>{label}</h3>
-            <RadioGroup onChange={onChange} value={this.state.value}>
-                <RadioButton  style={radioStyle} value={2}>Option B</RadioButton >
-                <RadioButton  style={radioStyle} value={3}>Option C</RadioButton >
-                <RadioButton  style={radioStyle} value={4}>Option D</RadioButton >
-            </RadioGroup>
-        </div>
-    )
+export default class Question extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            value: ""
+        }
+    }
+    render(){
+        const {label, options, onChange, name} = this.props
+        const renderedOptions = renderOptions(options)
+        return (
+            <div>
+                <h3>{label}</h3>
+                <RadioGroup onChange={onChange} value={this.state.value} name={name}>
+                    {renderedOptions}
+                </RadioGroup>
+            </div>
+        )
+    }
+
 }

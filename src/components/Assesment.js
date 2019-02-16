@@ -6,23 +6,58 @@ import RenderPain from "./RenderPain"
 import Question from "./Question"
 import RadioGroupFull from "../RadioGroup"
 
-export default () => {
+import questionList from "./questionList"
 
-    return (
-        <div>
+export default class Assesment extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            questionIndex: 0,
+            answers: {}
+        }
+        this.answerQuestion = this.answerQuestion.bind(this)
+        this.goNext = this.goNext.bind(this)
+    }
 
-            <div className="renderPainContainer">
-                <RenderPain />
+    answerQuestion(e) {
+        const self = this
+        e.preventDefault()
+        this.setState({
+            answers: {
+                ...this.state.answers,
+                [e.target.name]: e.target.value
+
+            },
+        })
+        console.log(this.state)
+        setTimeout(self.goNext(), 500); 
+    }
+
+    goNext(){
+        this.setState({
+            questionIndex: this.state.questionIndex + 1
+        })
+    }
+
+
+    render() {
+        const question = questionList[this.state.questionIndex]
+        const { label, options, name } = question
+        return (
+            <div>
+
+                <div className="renderPainContainer">
+                    <RenderPain />
+                </div>
+                <div className="aiContainer">
+                    <p>Welcome to busco abbs whatever.</p>
+                    <Progress percent={30} />
+                    <Question label={label} options={options} name={name} onChange={this.answerQuestion} />
+
+                </div>
+
             </div>
-            <div className="aiContainer">
-                <p>Welcome to busco abbs whatever.</p>
-                <Progress percent={30} />
-                <Question label={"Is your pain persistent ?"} />
-                <RadioGroupFull />
-                {/* <Button type="primary">Next</Button> */}
-                {/* <Timeline/> */}
-            </div>
+        )
+    }
 
-        </div>
-    )
 }
