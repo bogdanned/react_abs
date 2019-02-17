@@ -160,7 +160,7 @@ export default [
         "id": 9,
         "label": "How is the passing of your stool?",
         "name": "stool",
-        "image": "generalised.png",
+        "image": "stool.jpg",
         "options": [
             {
                 "value": "hard",
