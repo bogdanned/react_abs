@@ -3,6 +3,7 @@ export default [
         "id": 1,
         "label": "What is your name?",
         "name": "name",
+        "image": "left_flank.png",
         "machine_answer": "Nice to meet you Alex ",
         // "textType": true,
         "options": [
