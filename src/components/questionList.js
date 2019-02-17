@@ -108,7 +108,7 @@ export default [
         "id": 6,
         "label": "How intense is the pain?",
         "name": "intense",
-        "image": "generalised.png",
+        "image": "cryingbaby.jpg",
         "options": [
             {
                 "value": "mild",
