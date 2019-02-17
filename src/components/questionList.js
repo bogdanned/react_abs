@@ -17,7 +17,7 @@ export default [
         "label": "What is your gender?",
         "name": "Gender",
         "image": "baby.jpg",
-        "machine_answer": "Did you know that women have more than 50 percent chance of getting a blad infection at some point in their lives.",
+        "machine_answer": "Did you know that women have more than 50 percent chance of getting a blad infection at some point in their lives?",
         "options": [
             {
                 "value": "female",
