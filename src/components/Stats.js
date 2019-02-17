@@ -60,7 +60,9 @@ export default () => {
                 </Row>
             </div>
             <Popover content={content}>
-                <Button type="primary" className="buttonRep">Download Report</Button>
+                <a href="/report.pdf" target="_blank">
+                    <Button type="primary" className="buttonRep">Download Report</Button>
+                </a>
             </Popover>
         </div>
     )
