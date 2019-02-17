@@ -76,13 +76,13 @@ export default class Assesment extends React.Component {
     render() {
         const { thinking } = this.state
         const question = questionList[this.state.questionIndex]
-        const { label, options, name, textType } = question
+        const { label, options, name, textType, image } = question
         const progressValue = (this.state.questionIndex + 1) / questionList.length * 100
         // console.log(progressValue , "progressValue ")
         return (
             <div className="assesmentInner">
                 <div className="renderPainContainer">
-                    <RenderPain />
+                    <RenderPain image={image}/>
                 </div>
                 <div className="aiContainer">
 
@@ -111,7 +111,7 @@ export default class Assesment extends React.Component {
                         </div>
                         :
                         <div>
-                            Download report
+                            <Button>Download Report</Button>
                         </div>
                     }
 
