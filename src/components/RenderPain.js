@@ -10,7 +10,7 @@ export default ({ image }) => {
         )
     } else {
         return (
-            <img src="/body-512.png" className="absImage"></img>
+            <img src="/questions/generalised.png" className="absImage"></img>
         )
     }
 

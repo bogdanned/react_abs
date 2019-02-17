@@ -79,6 +79,7 @@ export default [
             }
         ]
     },
+
     {
         "id": 5,
         "label": "How do you describe the pain?",
@@ -106,7 +107,6 @@ export default [
         "id": 6,
         "label": "How intense is the pain?",
         "name": "intense",
-
         "options": [
             {
                 "value": "mild",
@@ -141,6 +141,7 @@ export default [
         "id": 8,
         "label": "Are you experiencing constant feeling of fullness?",
         "name": "bloated",
+        "image": "bloated_belly.jpg",
         "options": [
             {
                 "value": true,
