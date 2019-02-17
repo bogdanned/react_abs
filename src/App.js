@@ -27,7 +27,7 @@ class App extends React.Component {
       <div className="App">
         {this.state.assesment ? <Assesment /> :
           <div className="noAssesment">
-            <h1 className="headliner">Take your free self assesment</h1>
+            <h1 className="headliner">Know the Symptoms <br></br> Stop the Pain</h1>
             <button className="cta" onClick={this.showAssesment}>Lets go!</button>
           </div>
         }
