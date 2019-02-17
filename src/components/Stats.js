@@ -31,10 +31,10 @@ export default () => {
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Importance of visiting a Doctor"
+                                title="Visit a Doctor"
                                 value={7}
-                                
-                                valueStyle={{ color: '#3f8600' }}
+                                style={{height: "90px"}}
+                                valueStyle={{ color: '#3f8600', fontSize: "35px" }}
                                 prefix={<Icon type="fraction" />}
                                 suffix="/10"
                             />
@@ -45,8 +45,8 @@ export default () => {
                             <Statistic
                                 title="Pain Intensity"
                                 value={5}
-                                
-                                valueStyle={{ color: '#cf1322' }}
+                                style={{height: "90px"}}
+                                valueStyle={{ color: '#cf1322',fontSize: "35px"  }}
                                 prefix={<Icon type="fractioin" />}
                                 suffix="/10"
                             />
