@@ -7,10 +7,13 @@ const RadioButton = Radio.Button
 
 const radioStyle = (thinking) => ({
     display: !thinking ? 'block' : 'none',
-    height: '30px',
-    lineHeight: '25px',
-    borderLeft: 1,
-    margin: '5px'
+    height: "32px",
+    fontSize: "20px",
+    lineHeight: "28px",
+    borderLeft: "1px",
+    margin: "5px",
+    paddingLeft: "20px",
+    paddingRight: "20px"
 })
 
 const groupStyle = {
@@ -55,13 +58,12 @@ export default class Question extends React.Component {
         const renderedOptions = renderOptions(options, thinking)
         return (
             <div>
-                <h3>{label}</h3>
+                <h3 className="questionLabel">{label}</h3>
                 {textType ?
                     <div>
                         <Input placeholder={name} name={name} onChange={(e) => this.onInputChange(e)} />
                         <Button onClick={this.onClick}>Submit</Button>
                     </div>
-
                     :
                     <RadioGroup styles={groupStyle} onChange={onChange} value={this.state.value} name={name}>
                         {renderedOptions}

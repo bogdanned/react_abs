@@ -77,7 +77,7 @@ export default class Assesment extends React.Component {
 
           <p>AVA</p>
 
-          <Progress percent={progressValue} strokeWidth={20}/>
+          <Progress percent={progressValue} strokeWidth={15}/>
 
           <Question
             label={label}
