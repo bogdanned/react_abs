@@ -3,8 +3,8 @@ export default [
         "id": 1,
         "label": "What is your name?",
         "name": "name",
-        "image": "generalised.png",
-        "machine_answer": "Hi Alex, I am AVA.",
+        "image": "talking.gif",
+        "machine_answer": "Hi Alex, I am EVA and I will guide you today through your assesment.",
         "options": [
             {
                 "value": "Alex",
