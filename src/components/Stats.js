@@ -20,40 +20,40 @@ export default () => {
                 padding: '30px'
             }}>
                 <div>
-                    <Tag color="magenta">magenta</Tag>
-                    <Tag color="red">red</Tag>
-                    <Tag color="volcano">volcano</Tag>
-                    <Tag color="orange">orange</Tag>
-                    <Tag color="gold">gold</Tag>
-                    <Tag color="lime">lime</Tag>
-                    <Tag color="green">green</Tag>
-                    <Tag color="cyan">cyan</Tag>
-                    <Tag color="blue">blue</Tag>
-                    <Tag color="geekblue">geekblue</Tag>
-                    <Tag color="purple">purple</Tag>
+                    <Tag color="#66ff66">Symptom 1</Tag>
+                    <Tag color="#4dff4d">Symptom 2</Tag>
+                    <Tag color="#33ff33">Symptom 3</Tag>
+                    <Tag color="#00ff00">Symptom 4</Tag>
+                    <Tag color="#00ff00">Symptom 5</Tag>
+                    <Tag color="#00e600">Symptom 6</Tag>
+                    <Tag color="#00cc00">Symptom 7</Tag>
+                    <Tag color="#00b300">Symptom 8</Tag>
+                    <Tag color="#009900">Symptom 9</Tag>
+                    <Tag color="#008000">Symptom 10</Tag>
+                    <Tag color="#006600">Symthom 11</Tag>
                 </div>
                 <Row gutter={16}>
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Active"
-                                value={11.28}
-                                precision={2}
+                                title="Importance of visiting a doctor"
+                                value={7}
+                                
                                 valueStyle={{ color: '#3f8600' }}
-                                prefix={<Icon type="percentage" />}
-                                suffix="%"
+                                prefix={<Icon type="fraction" />}
+                                suffix="/10"
                             />
                         </Card>
                     </Col>
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Idle"
-                                value={9.3}
-                                precision={2}
+                                title="Pain intensity"s
+                                value={5}
+                                
                                 valueStyle={{ color: '#cf1322' }}
-                                prefix={<Icon type="perdentage" />}
-                                suffix="%"
+                                prefix={<Icon type="fractioin" />}
+                                suffix="/10"
                             />
                         </Card>
                     </Col>
