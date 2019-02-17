@@ -19,7 +19,7 @@ export default class Assesment extends React.Component {
         this.state = {
             questionIndex: 0,
             answers: {},
-            displayReport: true,
+            displayReport: false,
             thinking: false
         }
         this.answerQuestion = this.answerQuestion.bind(this)
