@@ -62,7 +62,7 @@ export default class Assesment extends React.Component {
                     questionIndex: self.state.questionIndex + 1
                 })
                 text && window.responsiveVoice.speak(questionList[self.state.questionIndex].label)
-            }, 2000)
+            }, 1500)
         } else {
             this.setState({
                 displayReport: true
