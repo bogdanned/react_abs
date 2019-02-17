@@ -16,6 +16,10 @@
     display: flex;
 }
 
+.questionLabel{
+  font-size: 25px;
+}
+
 .noAssesment{
   text-align: center;
 }
