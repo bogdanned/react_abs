@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import { version, Button, Progress, Radio } from 'antd'
+import { version, Button, Progress, Radio, Tag } from 'antd'
 import RenderPain from './RenderPain'
 import Question from './Question'
 import RadioGroupFull from '../RadioGroup'
@@ -9,6 +9,7 @@ import RadioGroupFull from '../RadioGroup'
 import { Spin } from 'antd'
 
 import questionList from './questionList'
+import Stats from "./Stats"
 
 import voice from '../util/voice'
 
@@ -111,7 +112,7 @@ export default class Assesment extends React.Component {
                         </div>
                         :
                         <div>
-                            <Button>Download Report</Button>
+                            <Stats/>
                         </div>
                     }
 

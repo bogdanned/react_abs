@@ -21,9 +21,17 @@ const groupStyle = {
 }
 
 const renderOptions = (options, thinking) => {
-    return options.map((opt, index) => (
-        <RadioButton className="option" key={index} style={radioStyle(thinking)} value={opt.value}>{opt.label}</RadioButton >
-    ))
+    return options.map((opt, index) => {
+
+
+        return <div key={index} >
+                    <RadioButton className="option" style={radioStyle(thinking)} value={opt.value}>{opt.label}</RadioButton >
+                    {/* <img src="/body-512.png" className="absImage"></img> */}
+                </div>
+        
+
+    })
+    
 }
 
 export default class Question extends React.Component {

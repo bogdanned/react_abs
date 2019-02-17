@@ -16,6 +16,10 @@
     display: flex;
 }
 
+.buttonRep{
+  margin-top: 40px;
+}
+
 .questionLabel{
   font-size: 25px;
 }
