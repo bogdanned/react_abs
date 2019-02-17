@@ -36,7 +36,7 @@ export default class Question extends React.Component {
 
     onInputChange(e) {
         console.log(e.target.value, "e")
-        this.setState({
+        e.target && e.target.value && this.setState({
             value: e.target.value,
             name: e.targe.name
         })

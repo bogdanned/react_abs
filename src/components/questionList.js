@@ -4,7 +4,7 @@ export default [
         "label": "What is your name?",
         "name": "name",
         "machine_answer": "Nice to meet you Alex ",
-        "textType": true,
+        // "textType": true,
         "options": [
             {
                 "value": "Alex",

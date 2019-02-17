@@ -58,6 +58,7 @@ export default class Assesment extends React.Component {
         thinking: false,
         questionIndex: self.state.questionIndex + 1
       })
+      text && window.responsiveVoice.speak(questionList[self.state.questionIndex].label)
     }, 2000)
     }
 
@@ -76,7 +77,7 @@ export default class Assesment extends React.Component {
 
           <p>AVA</p>
 
-          <Progress percent={progressValue} />
+          <Progress percent={progressValue} strokeWidth={20}/>
 
           <Question
             label={label}
