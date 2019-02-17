@@ -75,7 +75,8 @@
 }
 
 .absImage{
-  height: 332px;
+  /* height: 332px; */
+  max-height: 332px;
   max-width: 100%;
   text-align: center;
 }
