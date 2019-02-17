@@ -1,225 +1,213 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500);
-
-$blue : #4285F4;
-$red :  #DB4437;
-$yellow : #F4B400;
-$green : #0F9D58;
-
-html, body{
+html, body {
   margin: 0;
-  background: #f1f1f1;
+  background: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a:link, a:visited{
+a:link, a:visited {
   text-decoration: none;
 }
 
-.sign{
+.sign, .twitter {
   text-align: center;
   font-size: 14px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: #777;
   font-weight: 300;
-      transition: color 0.3s;
-  &:hover{
-    color: #333;
-    transition: color 0.3s;
-  }
+  transition: color 0.3s;
+}
+.sign:hover, .twitter:hover {
+  color: #333;
+  transition: color 0.3s;
 }
 
-.twitter{
-  @extend .sign;
+.twitter {
   font-weight: 500;
-  i{
-    padding-left: 10px;
-    font-size: 20px;
-    transition: color 0.3s;
-    &:hover{
-      color: #55acee;
-      transition: color 0.3s;
-    }
-  }
+}
+.twitter i {
+  padding-left: 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.twitter i:hover {
+  color: #55acee;
+  transition: color 0.3s;
 }
 
-.head{
-  i{
-    display: inline-block;
-    position: absolute;
-    margin-left: -30px;
-  }
+.head {
   margin: 0;
   text-align: center;
   padding: 50px;
   font-size: 20px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   color: #555;
   margin-left: 20px;
-  span{
-    font-size: 15px;
-    font-weight: 300;
-    color: #888;
-  }
+}
+.head i {
+  display: inline-block;
+  position: absolute;
+  margin-left: -30px;
+}
+.head span {
+  font-size: 15px;
+  font-weight: 300;
+  color: #888;
 }
 
-#container{
+#container {
   display: table;
   margin: 10px auto;
   width: 350px;
   height: 320px;
   position: relative;
-  span{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    transition: all 0.3s;
-    &:first-child{
-      background: $blue;
-    }
-    &:nth-child(2){
-      background: $red;
-      left: 100px;
-    }
-    &:nth-child(3){
-      background: $yellow;
-      left: 200px;
-    }
-    &:nth-child(4){
-      background: $green;
-      left: 300px;
-    }
-  }    
+}
+#container span {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: all 0.3s;
+}
+#container span:first-child {
+  background: #4285F4;
+}
+#container span:nth-child(2) {
+  background: #DB4437;
+  left: 100px;
+}
+#container span:nth-child(3) {
+  background: #F4B400;
+  left: 200px;
+}
+#container span:nth-child(4) {
+  background: #0F9D58;
+  left: 300px;
 }
 
-@keyframes updown{
-  0%{
+@keyframes updown {
+  0% {
     top: 0;
   }
-  50%{
+  50% {
     top: 15px;
   }
-  100%{
+  100% {
     top: -15px;
   }
 }
-
-@keyframes sound-1{
-  0%{
+@keyframes sound-1 {
+  0% {
     height: 280px;
     border-radius: 30px;
   }
-  10%{
+  10% {
     height: 190px;
     border-radius: 30px;
   }
-  20%{
+  20% {
     height: 260px;
     border-radius: 30px;
   }
-  25%{
+  25% {
     height: 180px;
     border-radius: 30px;
   }
-  30%{
+  30% {
     height: 280px;
     border-radius: 30px;
   }
-  40%{
+  40% {
     height: 190px;
     border-radius: 30px;
   }
-  50%{
+  50% {
     height: 160px;
     border-radius: 30px;
   }
-  60%{
+  60% {
     height: 130px;
     border-radius: 30px;
   }
-  70%{
+  70% {
     height: 100px;
     border-radius: 30px;
   }
-  80%{
+  80% {
     height: 130px;
     border-radius: 30px;
   }
-  85%{
+  85% {
     height: 100px;
     border-radius: 30px;
   }
-  90%{
+  90% {
     height: 130px;
     border-radius: 30px;
   }
-  95%{
+  95% {
     height: 100px;
     border-radius: 30px;
   }
-  100%{
+  100% {
     height: 50px;
     border-radius: 50%;
   }
 }
-
-@keyframes sound-2{
-  0%{
+@keyframes sound-2 {
+  0% {
     height: 180px;
     border-radius: 30px;
   }
-  20%{
+  20% {
     height: 120px;
     border-radius: 30px;
   }
-  30%{
+  30% {
     height: 180px;
     border-radius: 30px;
   }
-  40%{
+  40% {
     height: 120px;
     border-radius: 30px;
   }
-  50%{
+  50% {
     height: 110px;
     border-radius: 30px;
   }
-  60%{
+  60% {
     height: 90px;
     border-radius: 30px;
   }
-  70%{
+  70% {
     height: 70px;
     border-radius: 30px;
   }
-  80%{
+  80% {
     height: 90px;
     border-radius: 30px;
   }
-  90%{
+  90% {
     height: 70px;
     border-radius: 30px;
   }
-  100%{
+  100% {
     height: 50px;
     border-radius: 50%;
   }
 }
-
-@keyframes finalani{
-  0%{
+@keyframes finalani {
+  0% {
     top: 0;
   }
-  50%{
+  50% {
     top: -250px;
   }
-  100%{
+  100% {
     top: 0px;
   }
 }
-

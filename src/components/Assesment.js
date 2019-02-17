@@ -89,6 +89,7 @@ export default class Assesment extends React.Component {
                 <div className="aiContainer">
 
                     <p>AVA</p>
+                    {/* <iframe src="/animation/index.html"></iframe> */}
 
                     {!this.state.displayReport ?
                         <div>
