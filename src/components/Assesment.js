@@ -50,16 +50,18 @@ export default class Assesment extends React.Component {
                 [e.target.name]: e.target.value
             }
         })
+        console.log(self.state.questionIndex < questionList.length - 1, "true")
         if (self.state.questionIndex < questionList.length - 1) {
             setTimeout(function () {
                 // console.log(questionList[this.state.questionIndex + 1].label, "to say")
                 const text = questionList[self.state.questionIndex].machine_answer
+                const nextIndex = self.state.questionIndex + 1
                 text && window.responsiveVoice.speak(text)
                 self.setState({
                     thinking: false,
-                    questionIndex: self.state.questionIndex + 1
+                    questionIndex: nextIndex
                 })
-                text && window.responsiveVoice.speak(questionList[self.state.questionIndex].label)
+                window.responsiveVoice.speak(questionList[nextIndex].label)
             }, 1500)
         } else {
             this.setState({
