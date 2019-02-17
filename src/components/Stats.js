@@ -37,23 +37,23 @@ export default () => {
                         <Card>
                             <Statistic
                                 title="Importance of visiting a doctor"
-                                value={11.28}
-                                precision={2}
+                                value={7}
+                                
                                 valueStyle={{ color: '#3f8600' }}
-                                prefix={<Icon type="percentage" />}
-                                suffix="%"
+                                prefix={<Icon type="fraction" />}
+                                suffix="/10"
                             />
                         </Card>
                     </Col>
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Pain intensity"
-                                value={9.3}
-                                precision={2}
+                                title="Pain intensity"s
+                                value={5}
+                                
                                 valueStyle={{ color: '#cf1322' }}
-                                prefix={<Icon type="perdentage" />}
-                                suffix="%"
+                                prefix={<Icon type="fractioin" />}
+                                suffix="/10"
                             />
                         </Card>
                     </Col>
