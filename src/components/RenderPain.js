@@ -10,6 +10,8 @@ export default ({ image }) => {
         )
     } else {
         return (
+            //<iframe src="/animation/index.html"></iframe> 
+
             <img src="/questions/generalised.png" className="absImage"></img>
         )
     }
