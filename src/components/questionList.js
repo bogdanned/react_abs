@@ -4,7 +4,7 @@ export default [
         "label": "What is your name?",
         "name": "name",
         "image": "generalised.png",
-        "machine_answer": "Nice to meet you Alex ",
+        "machine_answer": "Hi Alex, I am AVA.",
         "options": [
             {
                 "value": "Alex",
@@ -16,7 +16,7 @@ export default [
         "id": 2,
         "label": "What is your gender?",
         "name": "Gender",
-        "image": "generalised.png",
+        "image": "baby.jpg",
         "machine_answer": "Did you know that women have more than 50 percent chance of getting a blad infection at some point in their lives.",
         "options": [
             {
@@ -33,7 +33,7 @@ export default [
         "id": 3,
         "label": "How long has your pain been going on for?",
         "name": "pain",
-        "image": "generalised.png",
+        "image": "clessidra.jpg",
         "machine_answer": "1 week? I am sorry. Alex, I have a few more questions for you.",
         "options": [
             {
@@ -84,6 +84,7 @@ export default [
         "id": 5,
         "label": "How do you describe the pain?",
         "name": "pain_type",
+        "image": "pain_intensity.jpg",
         "options": [
             {
                 "value": "sharp",
@@ -107,6 +108,7 @@ export default [
         "id": 6,
         "label": "How intense is the pain?",
         "name": "intense",
+        "image": "cryingbaby.jpg",
         "options": [
             {
                 "value": "mild",
@@ -126,6 +128,7 @@ export default [
         "id": 7,
         "label": "Have you been vomiting or feeling nauseous?",
         "name": "vomit",
+        "image": "vomit.jpg",
         "options": [
             {
                 "value": true,
@@ -157,6 +160,7 @@ export default [
         "id": 9,
         "label": "How is the passing of your stool?",
         "name": "stool",
+        "image": "generalised.png",
         "options": [
             {
                 "value": "hard",
@@ -172,6 +176,7 @@ export default [
         "id": 10,
         "label": "How does eating affect your pain?",
         "name": "eating",
+        "image": "generalised.png",
         "machine_answer": "Alex, this is the end of the questionnaire. I have reviewed your answers, and I would say that probably the pain you are experiencing is related to possible constipation. I would advise you to see a doctor. Do not worry, I have filed a report for you that you can take with you when you go to.",
         "options": [
             {

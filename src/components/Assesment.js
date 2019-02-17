@@ -79,7 +79,7 @@ export default class Assesment extends React.Component {
         const question = questionList[this.state.questionIndex]
         const { label, options, name, textType, image } = question
         console.log(image, "image")
-        const progressValue = (this.state.questionIndex + 1) / questionList.length * 100
+        const progressValue = (this.state.questionIndex + 1) / (questionList.length) * 100
         // console.log(progressValue , "progressValue ")
         return (
             <div className="assesmentInner">
@@ -88,8 +88,7 @@ export default class Assesment extends React.Component {
                 </div>
                 <div className="aiContainer">
 
-                    <p>AVA</p>
-                    {/* <iframe src="/animation/index.html"></iframe> */}
+                    <p>EVA</p>
 
                     {!this.state.displayReport ?
                         <div>
