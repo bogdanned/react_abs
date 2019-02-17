@@ -20,23 +20,18 @@ export default () => {
                 padding: '30px'
             }}>
                 <div>
-                    <Tag color="#66ff66">Symptom 1</Tag>
-                    <Tag color="#4dff4d">Symptom 2</Tag>
-                    <Tag color="#33ff33">Symptom 3</Tag>
-                    <Tag color="#00ff00">Symptom 4</Tag>
-                    <Tag color="#00ff00">Symptom 5</Tag>
-                    <Tag color="#00e600">Symptom 6</Tag>
-                    <Tag color="#00cc00">Symptom 7</Tag>
-                    <Tag color="#00b300">Symptom 8</Tag>
-                    <Tag color="#009900">Symptom 9</Tag>
-                    <Tag color="#008000">Symptom 10</Tag>
-                    <Tag color="#006600">Symthom 11</Tag>
+                    <Tag style={{margin: "5px"}} color="#00e600">Low abdominal pain</Tag>
+                    <Tag color="#00cc00">Pain up to one week</Tag>
+                    <Tag style={{margin: "5px"}} color="#00b300">Dull ache</Tag>
+                    <Tag color="#009900">Moderat pain intensity</Tag>
+                    <Tag style={{margin: "5px"}}color="#008000">Bloating</Tag>
+                    <Tag color="#006600">hard stool</Tag>
                 </div>
                 <Row gutter={16}>
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Importance of visiting a doctor"
+                                title="Importance of visiting a Doctor"
                                 value={7}
                                 
                                 valueStyle={{ color: '#3f8600' }}
@@ -48,7 +43,7 @@ export default () => {
                     <Col span={12}>
                         <Card>
                             <Statistic
-                                title="Pain intensity"s
+                                title="Pain Intensity"
                                 value={5}
                                 
                                 valueStyle={{ color: '#cf1322' }}
